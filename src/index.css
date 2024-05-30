@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 body{
-    background-color: rgb(241, 245, 241);
+   /* background-image: url('./20240530_200906.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    */
 }
+

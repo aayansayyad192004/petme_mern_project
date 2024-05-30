@@ -154,7 +154,7 @@ export default function Search() {
                 onChange={handleChange}
                 checked={sidebardata.type === 'all'}
               />
-              <span>Rent & Sale</span>
+              <span>Foster & Sale</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -164,7 +164,7 @@ export default function Search() {
                 onChange={handleChange}
                 checked={sidebardata.type === 'rent'}
               />
-              <span>Rent</span>
+              <span>Foster</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -174,7 +174,7 @@ export default function Search() {
                 onChange={handleChange}
                 checked={sidebardata.type === 'sale'}
               />
-              <span>Sale</span>
+              <span>Adoption</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -184,11 +184,11 @@ export default function Search() {
                 onChange={handleChange}
                 checked={sidebardata.offer}
               />
-              <span>Offer</span>
+              <span>Foster to Adopt</span>
             </div>
           </div>
           <div className='flex gap-2 flex-wrap items-center'>
-            <label className='font-semibold'>Amenities:</label>
+            <label className='font-semibold'>Animal:</label>
             <div className='flex gap-2'>
               <input
                 type='checkbox'
@@ -197,7 +197,7 @@ export default function Search() {
                 onChange={handleChange}
                 checked={sidebardata.parking}
               />
-              <span>Parking</span>
+              <span>Cats</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -207,7 +207,7 @@ export default function Search() {
                 onChange={handleChange}
                 checked={sidebardata.furnished}
               />
-              <span>Furnished</span>
+              <span>Dogs</span>
             </div>
           </div>
           <div className='flex items-center gap-2'>
@@ -219,19 +219,19 @@ export default function Search() {
               className='border rounded-lg p-3'
             >
               <option value='regularPrice_desc'>Price high to low</option>
-              <option value='regularPrice_asc'>Price low to hight</option>
+              <option value='regularPrice_asc'>Price low to high</option>
               <option value='createdAt_desc'>Latest</option>
               <option value='createdAt_asc'>Oldest</option>
             </select>
           </div>
-          <button className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95'>
+          <button className='bg-red-950 text-white p-3 rounded-lg uppercase hover:opacity-95'>
             Search
           </button>
         </form>
       </div>
       <div className='flex-1'>
-        <h1 className='text-3xl font-semibold border-b p-3 text-slate-700 mt-5'>
-          Listing results:
+        <h1 className='text-3xl font-semibold border-b p-3 text-red-950 mt-5'>
+          Pet Search results:
         </h1>
         <div className='p-7 flex flex-wrap gap-4'>
           {!loading && listings.length === 0 && (
@@ -252,7 +252,7 @@ export default function Search() {
           {showMore && (
             <button
               onClick={onShowMoreClick}
-              className='text-green-700 hover:underline p-7 text-center w-full'
+              className='text-red-950 hover:underline p-7 text-center w-full'
             >
               Show more
             </button>

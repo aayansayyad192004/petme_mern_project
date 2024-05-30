@@ -171,8 +171,8 @@ export default function CreateListing() {
   };
   return (
     <main className='p-3 max-w-4xl mx-auto'>
-      <h1 className='text-3xl font-semibold text-center my-7'>
-        Update a Listing
+      <h1 className='text-3xl font-semibold text-center my-7 text-red-950'>
+        Update Pet Profile
       </h1>
       <form onSubmit={handleSubmit} className='flex flex-col sm:flex-row gap-4'>
         <div className='flex flex-col gap-4 flex-1'>
@@ -224,7 +224,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.type === 'rent'}
               />
-              <span>Rent</span>
+              <span>Foster </span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -234,7 +234,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.parking}
               />
-              <span>Parking spot</span>
+              <span>Cats</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -244,7 +244,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.furnished}
               />
-              <span>Furnished</span>
+              <span>Dogs</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -254,7 +254,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.offer}
               />
-              <span>Offer</span>
+              <span>Foste to Adopt</span>
             </div>
           </div>
           <div className='flex flex-wrap gap-6'>
@@ -269,7 +269,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 value={formData.bedrooms}
               />
-              <p>Beds</p>
+              <p>Age</p>
             </div>
             <div className='flex items-center gap-2'>
               <input
@@ -282,7 +282,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 value={formData.bathrooms}
               />
-              <p>Baths</p>
+              <p>Vaccines</p>
             </div>
             <div className='flex items-center gap-2'>
               <input
@@ -298,7 +298,7 @@ export default function CreateListing() {
               <div className='flex flex-col items-center'>
                 <p>Regular price</p>
                 {formData.type === 'rent' && (
-                  <span className='text-xs'>($ / month)</span>
+                  <span className='text-xs'>(₹ / month)</span>
                 )}
               </div>
             </div>
@@ -374,9 +374,9 @@ export default function CreateListing() {
             ))}
           <button
             disabled={loading || uploading}
-            className='p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
+            className='p-3 bg-red-950 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
           >
-            {loading ? 'Updating...' : 'Update listing'}
+            {loading ? 'Updating...' : 'Update Pet Profile'}
           </button>
           {error && <p className='text-red-700 text-sm'>{error}</p>}
         </div>

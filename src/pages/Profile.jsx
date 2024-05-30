@@ -215,15 +215,15 @@ export default function Profile() {
         />
         <button
           disabled={loading}
-          className='bg-slate-700 text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80'
+          className='bg-orange-400 text-white rounded-lg p-3 uppercase hover:opacity-95 disabled:opacity-80'
         >
           {loading ? 'Loading...' : 'Update'}
         </button>
         <Link
-          className='bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95'
+          className='bg-red-950 text-white p-3 rounded-lg uppercase text-center hover:opacity-95'
           to={'/create-listing'}
         >
-          Create Listing
+          Create Pet Profile
         </Link>
       </form>
       <div className='flex justify-between mt-5'>
@@ -242,8 +242,8 @@ export default function Profile() {
       <p className='text-green-700 mt-5'>
         {updateSuccess ? 'User is updated successfully!' : ''}
       </p>
-      <button onClick={handleShowListings} className='text-green-700 w-full'>
-        Show Listings
+      <button onClick={handleShowListings} className='text-red-950 w-full'>
+        Show Pet Profile
       </button>
       <p className='text-red-700 mt-5'>
         {showListingsError ? 'Error showing listings' : ''}
@@ -251,8 +251,8 @@ export default function Profile() {
 
       {userListings && userListings.length > 0 && (
         <div className='flex flex-col gap-4'>
-          <h1 className='text-center mt-7 text-2xl font-semibold'>
-            Your Listings
+          <h1 className='text-center mt-7 text-2xl font-semibold text-orange-400'>
+            Your Pet Profile
           </h1>
           {userListings.map((listing) => (
             <div

@@ -156,13 +156,13 @@ export default function CreateListing() {
   return (
     <main className='p-3 max-w-4xl mx-auto'>
       <h1 className='text-3xl font-semibold text-center my-7'>
-        Create a Listing
+        Create Pet Profile
       </h1>
       <form onSubmit={handleSubmit} className='flex flex-col sm:flex-row gap-4'>
         <div className='flex flex-col gap-4 flex-1'>
           <input
             type='text'
-            placeholder='Name'
+            placeholder='Name - Breed'
             className='border p-3 rounded-lg'
             id='name'
             maxLength='62'
@@ -198,7 +198,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.type === 'sale'}
               />
-              <span>Sell</span>
+              <span>Adoption</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -208,7 +208,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.type === 'rent'}
               />
-              <span>Rent</span>
+              <span>Foster Care</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -218,7 +218,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.parking}
               />
-              <span>Parking spot</span>
+              <span>Cats</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -228,7 +228,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.furnished}
               />
-              <span>Furnished</span>
+              <span>Dogs</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -238,7 +238,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.offer}
               />
-              <span>Offer</span>
+              <span>Foster to Adopt</span>
             </div>
           </div>
           <div className='flex flex-wrap gap-6'>
@@ -253,7 +253,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 value={formData.bedrooms}
               />
-              <p>Beds</p>
+              <p>Age (in years)</p>
             </div>
             <div className='flex items-center gap-2'>
               <input
@@ -266,7 +266,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 value={formData.bathrooms}
               />
-              <p>Baths</p>
+              <p>Vaccines</p>
             </div>
             <div className='flex items-center gap-2'>
               <input
@@ -282,7 +282,7 @@ export default function CreateListing() {
               <div className='flex flex-col items-center'>
                 <p>Regular price</p>
                 {formData.type === 'rent' && (
-                  <span className='text-xs'>($ / month)</span>
+                  <span className='text-xs'>(₹ / month)</span>
                 )}
               </div>
             </div>
@@ -329,7 +329,7 @@ export default function CreateListing() {
               type='button'
               disabled={uploading}
               onClick={handleImageSubmit}
-              className='p-3 text-green-700 border border-green-700 rounded uppercase hover:shadow-lg disabled:opacity-80'
+              className='p-3 text-red-950 border border-green-700 rounded uppercase hover:shadow-lg disabled:opacity-80'
             >
               {uploading ? 'Uploading...' : 'Upload'}
             </button>
@@ -359,9 +359,9 @@ export default function CreateListing() {
             ))}
           <button
             disabled={loading || uploading}
-            className='p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
+            className='p-3 bg-red-950 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
           >
-            {loading ? 'Creating...' : 'Create listing'}
+            {loading ? 'Creating...' : 'Create Profile'}
           </button>
           {error && <p className='text-red-700 text-sm'>{error}</p>}
         </div>
