@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+   /* background-image: url('./20240530_200906.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    */
+}
+
