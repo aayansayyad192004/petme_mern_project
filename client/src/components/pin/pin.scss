@@ -2,7 +2,7 @@
     display: flex;
     gap: 20px;
   
-    img{
+    :is(img) {
       width: 64px;
       height: 48px;
       object-fit: cover;
