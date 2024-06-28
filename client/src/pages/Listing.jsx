@@ -135,14 +135,14 @@ export default function Listing() {
                 {listing.furnished ? (<><FaDog className='text-lg' />Dog </>) : ' '}
               </li>
             </ul>
-            {currentUser && listing.userRef !== currentUser._id && !contact && (
+            
               <button
                 onClick={() => setContact(true)}
                 className='bg-red-950 text-white rounded-lg uppercase hover:opacity-95 p-3'
               >
                 Contact Pet Owner
               </button>
-            )}
+            
             {contact && <Contact listing={listing} />}
           </div>
         </div>
