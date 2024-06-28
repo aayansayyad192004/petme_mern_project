@@ -1,14 +1,10 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import PaymentButton from './PaymentButton';
+import React, { useEffect, useState } from 'react';
 
-export default function Contact({ listing }) {
+import PaymentButton from './PaymentButton'
+
+const Contact = ({ listing }) => {
   const [landlord, setLandlord] = useState(null);
   const [message, setMessage] = useState('');
-
-  const onChange = (e) => {
-    setMessage(e.target.value);
-  };
 
   useEffect(() => {
     const fetchLandlord = async () => {
@@ -23,6 +19,10 @@ export default function Contact({ listing }) {
     fetchLandlord();
   }, [listing.userRef]);
 
+  const handleMessageSend = () => {
+    window.location.href = `mailto:${landlord.email}?subject=Regarding ${listing.name}&body=${message}`;
+  };
+
   return (
     <>
       {landlord && (
@@ -36,20 +36,23 @@ export default function Contact({ listing }) {
             id="message"
             rows="2"
             value={message}
-            onChange={onChange}
+            onChange={(e) => setMessage(e.target.value)}
             placeholder="Enter your message here..."
             className="w-full border p-3 rounded-lg"
           ></textarea>
-
-          <Link
-            to={`mailto:${landlord.email}?subject=Regarding ${listing.name}&body=${message}`}
-            className="bg-red-950 text-white text-center p-3 uppercase rounded-lg hover:opacity-95"
-          >
-            Send Message
-          </Link>
-          <PaymentButton amount={listing.price} description={listing.name} listingId={listing.id} />
+          <div className="flex gap-4">
+            <button
+              onClick={handleMessageSend}
+              className="bg-red-950 text-white text-center p-3 uppercase rounded-lg hover:opacity-95"
+            >
+              Send Message
+            </button>
+            <PaymentButton amount={listing.price} description={listing.name} listingId={listing.id} />
+          </div>
         </div>
       )}
     </>
   );
-}
+};
+
+export default Contact;
