@@ -1,8 +1,30 @@
-# React + Vite
+## PetMe: Pet Adoption Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PetMe is a comprehensive pet adoption platform developed using the MERN stack. It aims to streamline the pet adoption process and facilitate connections between potential pet owners and pets in need of homes.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Authentication**: Secure login and registration functionality for users.
+- **Profile Management**: Users can create and manage their profiles with ease.
+- **Pet Profiles**: Detailed profiles for each pet, including photos, descriptions, and health information.
+- **Advanced Search Filters**: Search for pets based on various criteria such as species, breed, age, and location.
+- **Messaging System**: Secure communication between users and pet shelters through an integrated messaging system.
+- **Payment Integration**: Razorpay integration for handling donations and adoption fees securely.
+- **Map Integration**: Maps to locate nearby pet shelters and available pets.
+- **Email Notifications**: Automated email notifications for user interactions and updates.
+
+## Technologies Used
+
+- **Frontend**: React.js, Tailwind CSS, HTML, CSS, JavaScript
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Others**: Razorpay, Firebase, GitHub, Figma
+
+
+### Getting Started
+1. Clone the repository: `git clone [https://github.com/aayansayyad192004/3dfolio.git](https://github.com/aayansayyad192004/petme_mern_project)`
+2. Install dependencies: `npm install`
+3. Run the development server: `npm run dev`
+4. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+
