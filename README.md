@@ -1,6 +1,7 @@
 ## PetMe: Pet Adoption Platform
 
-PetMe is a comprehensive pet adoption platform developed using the MERN stack. It aims to streamline the pet adoption process and facilitate connections between potential pet owners and pets in need of homes.
+PetMe is a comprehensive pet adoption platform developed using the MERN stack and Tailwind CSS. It aims to streamline the pet adoption process and facilitate connections between potential 
+pet owners and pets in need of homes.
 
 ## Features
 
@@ -22,9 +23,9 @@ PetMe is a comprehensive pet adoption platform developed using the MERN stack. I
 
 
 ### Getting Started
-1. Clone the repository: `git clone [https://github.com/aayansayyad192004/3dfolio.git](https://github.com/aayansayyad192004/petme_mern_project)`
+1. Clone the repository: `git clone https://github.com/aayansayyad192004/petme_mern_project`
 2. Install dependencies: `npm install`
 3. Run the development server: `npm run dev`
-4. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
 
 
